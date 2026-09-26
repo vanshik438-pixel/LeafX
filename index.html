@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07100c">
-  <title>Leaf — Social Token Launchpad</title>
+  <title>LeafX — Social Token Launchpad</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="Leaf home"><span class="brand-mark">✦</span><span>Leaf</span></a>
+      <a class="brand" href="#home" aria-label="LeafX home"><span class="brand-mark">✦</span><span>LeafX</span></a>
       <nav class="desktop-nav"><a href="#explore">Explore</a><a href="#how">How it works</a><a href="#dashboard">Dashboard</a></nav>
-      <div class="top-actions"><button class="ghost-btn" id="themeBtn" title="Toggle theme">◐</button><button class="wallet-btn" id="walletBtn">Connect wallet</button></div>
+      <div class="top-actions"><button class="ghost-btn" id="themeBtn" title="Toggle theme">◐</button><button class="wallet-btn" id="walletBtn">🦊 Connect MetaMask</button></div>
     </header>
 
     <main>
@@ -22,7 +22,7 @@
           <h1>Turn an <span>X-gradient">X</span> identity into a token.</h1>
           <p>Create a social token, pair it with a base asset, define transparent fee splits, and launch from one clean flow.</p>
           <div class="hero-actions"><button class="primary-btn" data-scroll="#create">Create a launch <span>→</span></button><button class="secondary-btn" data-scroll="#explore">Explore launches</button></div>
-          <div class="trust-row"><span>✓ One approval</span><span>✓ Sepolia testnet</span><span>✓ Transparent splits</span></div>
+          <div class="trust-row"><span>✓ MetaMask</span><span>✓ Sepolia testnet</span><span>✓ Transparent splits</span></div>
         </div>
         <div class="hero-card">
           <div class="hero-card-top"><span>SEPOLIA TESTNET</span><span class="green-dot"></span></div>
@@ -41,14 +41,14 @@
             <button class="step active" data-step="1"><span>1</span><div><b>Identity</b><small>Link your X account</small></div></button>
             <button class="step" data-step="2"><span>2</span><div><b>Token</b><small>Name, symbol & pair</small></div></button>
             <button class="step" data-step="3"><span>3</span><div><b>Fees</b><small>Set transparent splits</small></div></button>
-            <button class="step" data-step="4"><span>Launch</span><div><b>Review</b><small>Sign on Sepolia</small></div></button>
+            <button class="step" data-step="4"><span>4</span><div><b>Launch</b><small>Review & sign</small></div></button>
           </aside>
           <div class="builder-main">
             <form id="launchForm">
               <div class="form-step active" data-panel="1">
                 <div class="panel-title"><span class="number">01</span><div><h3>Link it to an X account.</h3><p>The creator identity displayed on the launch page.</p></div></div>
                 <label>X creator handle<input id="xHandle" type="text" placeholder="@creator" value="@leafdotfun"></label>
-                <div class="profile-preview"><div class="avatar">L</div><div><b>Leaf</b><span>@leafdotfun · creator profile</span></div><span class="verified">✓</span></div>
+                <div class="profile-preview"><div class="avatar">L</div><div><b>LeafX</b><span>@leafdotfun · creator profile</span></div><span class="verified">✓</span></div>
                 <button type="button" class="primary-btn next">Continue <span>→</span></button>
               </div>
               <div class="form-step" data-panel="2">
@@ -69,10 +69,10 @@
                 <div class="row-actions"><button type="button" class="secondary-btn back">Back</button><button type="button" class="primary-btn next">Continue <span>→</span></button></div>
               </div>
               <div class="form-step" data-panel="4">
-                <div class="panel-title"><span class="number">04</span><div><h3>Review & sign.</h3><p>Your browser will ask MetaMask to sign a real Sepolia test transaction.</p></div></div>
+                <div class="panel-title"><span class="number">04</span><div><h3>Review & sign.</h3><p>Clicking launch opens MetaMask and asks you to confirm a real Sepolia test transaction.</p></div></div>
                 <div class="review"><div><span>Creator</span><b id="reviewHandle">@leafdotfun</b></div><div><span>Token</span><b id="reviewToken">$PAID</b></div><div><span>Pair</span><b id="reviewPair">DOGE</b></div><div><span>Fees</span><b>45 / 45 / 10</b></div></div>
                 <div id="walletRequirement" class="wallet-requirement">Connect MetaMask on Sepolia before launching.</div>
-                <button type="submit" class="launch-btn">Sign Sepolia test transaction <span>↗</span></button>
+                <button type="submit" class="launch-btn">🦊 Open MetaMask & sign <span>↗</span></button>
                 <div class="demo-note">This currently sends a 0 ETH self-transaction on Sepolia to prove the wallet/transaction flow. It does not deploy a token contract yet.</div>
                 <button type="button" class="secondary-btn back">Back</button>
               </div>
@@ -83,10 +83,10 @@
       </section>
 
       <section class="section" id="explore"><div class="section-heading"><div><div class="eyebrow">DISCOVER</div><h2>Live launches</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="creator">Creator</button><button class="filter" data-filter="trending">Trending</button></div></div><div class="launch-grid" id="launchGrid"></div></section>
-      <section class="section how" id="how"><div class="section-heading"><div><div class="eyebrow">SIMPLE BY DESIGN</div><h2>How Leaf works</h2></div></div><div class="how-grid"><article><span>01</span><h3>Connect MetaMask</h3><p>Connect your wallet and switch to Ethereum Sepolia. LeafX never sees your private key.</p></article><article><span>02</span><h3>Configure token</h3><p>Choose the creator identity, token metadata, paired asset, and transparent fee allocation.</p></article><article><span>03</span><h3>Sign & verify</h3><p>MetaMask signs a testnet transaction and LeafX gives you the Sepolia Explorer link.</p></article></div></section>
+      <section class="section how" id="how"><div class="section-heading"><div><div class="eyebrow">SIMPLE BY DESIGN</div><h2>How LeafX works</h2></div></div><div class="how-grid"><article><span>01</span><h3>Connect MetaMask</h3><p>Connect your wallet and switch to Ethereum Sepolia. LeafX never sees your private key.</p></article><article><span>02</span><h3>Configure token</h3><p>Choose the creator identity, token metadata, paired asset, and transparent fee allocation.</p></article><article><span>03</span><h3>Sign & verify</h3><p>MetaMask signs a testnet transaction and LeafX gives you the Sepolia Explorer link.</p></article></div></section>
       <section class="section dashboard" id="dashboard"><div class="section-heading"><div><div class="eyebrow">CREATOR VIEW</div><h2>Dashboard</h2></div><span class="status-chip" id="networkStatus"><i></i> Wallet not connected</span></div><div class="dash-grid"><div class="dash-card"><small>CONNECTED ADDRESS</small><strong id="dashAddress">—</strong><span id="dashNetwork">Connect MetaMask to populate</span></div><div class="dash-card"><small>SEPOLIA ETH BALANCE</small><strong id="dashBalance">—</strong><span>Testnet balance</span></div><div class="dash-card"><small>NETWORK</small><strong id="dashChain">—</strong><span>Chain ID 11155111</span></div></div></section>
     </main>
-    <footer><div class="brand"><span class="brand-mark">✦</span><span>Leaf</span></div><span>Social token launchpad · Sepolia testnet</span><span>Never share your seed phrase</span></footer>
+    <footer><div class="brand"><span class="brand-mark">✦</span><span>LeafX</span></div><span>Social token launchpad · Sepolia testnet</span><span>Never share your seed phrase</span></footer>
   </div>
 
   <div class="modal" id="walletModal"><div class="modal-card"><button class="modal-close">×</button><div class="eyebrow">REAL WALLET</div><h3>Connect MetaMask</h3><p>LeafX uses your browser wallet. Your private key and seed phrase never leave MetaMask.</p><button class="wallet-option" id="metaMaskConnect">🦊 MetaMask <span>→</span></button><button class="wallet-option" id="switchSepolia">⛓ Sepolia network <span>→</span></button></div></div>
